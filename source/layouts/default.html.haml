@@ -1,0 +1,58 @@
+!!!
+%html
+  %head
+    %title Backnische . frisch . fein . genial
+    %meta{charset: 'utf-8'}/
+    %meta{content: 'deutsch, de', 'http-equiv' => 'language'}/
+    %meta{content: 'index,follow', name: 'robots'}/
+    %meta{content: '7 days', name: 'revisit-after'}/
+    %meta{content: 'Michael Kessler - www.mksoft.ch', name: 'developer'}/
+    %meta{content: 'Backnische . frisch . fein . genial', name: 'description'}/
+    %meta{content: 'Backen, Muffins, Cupcakes, Cakes, Grittibänze, Kindergeburtstag, Kaffeekränzchen', name: 'keywords'}/
+
+    = stylesheet_link_tag 'grid'
+    = stylesheet_link_tag 'backnische'
+    = stylesheet_link_tag 'slimbox'
+
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-28802532-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    %script{src: 'http://use.typekit.com/htt1tge.js', type: 'text/javascript'}
+    :javascript
+      try{Typekit.load();}catch(e){}
+
+    %script{src: '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', type: 'text/javascript'}
+    %script{src: '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', type: 'text/javascript'}
+
+    = javascript_include_tag 'slimbox'
+    = javascript_include_tag 'backnische'
+
+  %body
+    .top
+    .bottom
+    #container
+      %header
+        %a{href: '/'}
+          %img{alt: 'Backnische . frisch . fein . genial', height: '250', src: '/images/backnische.png', width: '406'}/
+      %nav
+        %ul
+          %li.first
+            = nav_link 'Home', '/index.html'
+          %li
+            = nav_link 'Aktuell', '/aktuell.html'
+          %li
+            = nav_link 'Galerie', '/galerie.html'
+          %li
+            = nav_link 'Produkte', '/produkte.html'
+          %li
+            = nav_link 'Kurse', '/kurse.html'
+      #content
+        = yield

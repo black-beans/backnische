@@ -1,0 +1,29 @@
+/* 960 Grid System ~ Core CSS.
+ * Learn more ~ http://960.gs/
+ * *
+ * Licensed under GPL and MIT. */
+@import "compass/reset";
+@import "960/grid";
+@import "960/text";
+
+// But most compass users prefer to construct semantic layouts like so (two column layout with header and footer):
+
+$ninesixty-columns: 24;
+
+#container {
+  @include grid-container;
+
+  header {
+    @include grid(24);
+  }
+
+  nav {
+    @include grid(8);
+  }
+
+  #content {
+    @include grid(16);
+  }
+}
+
+@include text;

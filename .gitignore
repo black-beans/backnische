@@ -1,0 +1,7 @@
+node_modules/
+build/
+.idea
+Thumbs.db
+.bundle
+deploy
+.s3_sync
