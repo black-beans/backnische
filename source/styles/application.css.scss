@@ -1,3 +1,32 @@
+/*
+*= require_tree ./plugins
+*= require_self
+*/
+
+@import "compass/reset";
+@import "960/grid";
+@import "960/text";
+
+$ninesixty-columns: 24;
+
+#container {
+  @include grid-container;
+
+  header {
+    @include grid(24);
+  }
+
+  nav {
+    @include grid(8);
+  }
+
+  #content {
+    @include grid(16);
+  }
+}
+
+@include text;
+
 body {
   margin: 0;
   padding: 0;
